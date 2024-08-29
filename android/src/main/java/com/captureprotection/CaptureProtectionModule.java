@@ -239,7 +239,6 @@ public class CaptureProtectionModule extends ReactContextBaseJavaModule implemen
   private void addListener() {
     if (getScreenCaptureCallback() == null) {
       if (contentObserver == null) {
-        requestStoragePermission();
         contentObserver = new ContentObserver(Utils.MainHandler.INSTANCE) {
           @Override
           public void onChange(boolean selfChange, Uri uri) {
